@@ -22,6 +22,10 @@ Version:        0.1.0
 	width: 50px;
 }
 
+.pdp-whatsapp img {
+	max-width: 100%;
+}
+
 .pdp-whatsapp.whatsapp_number_1 {
 	bottom: 100px;
 }
