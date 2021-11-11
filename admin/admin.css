@@ -1,0 +1,10 @@
+.wp-admin table.wp-list-table .column-thumb {
+	width: 150px;
+}
+
+.wp-admin table.wp-list-table td.column-thumb img.attachment-thumbnail {
+	height: 150px;
+	width: 150px;
+	max-height: 150px;
+	max-width: 150px;
+}
