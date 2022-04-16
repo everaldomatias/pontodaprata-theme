@@ -62,9 +62,6 @@ class pdp_general_setting {
 
 		register_setting( 'general', 'whatsapp_number_2', 'esc_attr' );
         add_settings_field( 'whatsapp_number_2', '<label for="whatsapp_number_2">'.__('Número do WhatsApp (Secundário)' , 'pontodaprata' ).'</label>' , array(&$this, 'whatsapp_number_2') , 'general' );
-
-		register_setting( 'general', 'whatsapp_message', 'esc_attr' );
-        add_settings_field( 'whatsapp_message', '<label for="whatsapp_message">'.__('Mensagem do WhatsApp' , 'pontodaprata' ).'</label>' , array(&$this, 'whatsapp_message') , 'general' );
 	}
 
     function whatsapp_number_1() {
@@ -76,32 +73,26 @@ class pdp_general_setting {
 		$whatsapp_number_2 = get_option( 'whatsapp_number_2', '' );
         echo '<input type="text" id="whatsapp_number_2" name="whatsapp_number_2" value="' . $whatsapp_number_2 . '" />';
     }
-
-	function whatsapp_message() {
-		$whatsapp_message = get_option( 'whatsapp_message', '' );
-		echo '<input type="text" id="whatsapp_message" name="whatsapp_message" value="' . $whatsapp_message . '" />';
-	}
 }
 
 // Print WhatsApp buttons
 function pdp_show_whatsapp_buttons() {
 	$whatsapp_number_1 = get_option( 'whatsapp_number_1', '' );
 	$whatsapp_number_2 = get_option( 'whatsapp_number_2', '' );
-	$whatsapp_message = get_option( 'whatsapp_message', '' );
-	$link = 'https://web.whatsapp.com/send?phone=';
+	$link = 'https://api.whatsapp.com/send?phone=';
 
-	if ( ! empty( $whatsapp_message ) ) {
+	if ( ! empty( $whatsapp_number_1 ) || ! empty( $whatsapp_number_2 ) ) {
 
 		$icon = get_stylesheet_directory_uri() . '/images/whatsapp.svg';
 
 		if ( ! empty( $whatsapp_number_1 ) ) {
-			echo '<a target="_blank" href="' . esc_url( $link ) . esc_html( $whatsapp_number_1 ) . '?text=' . $whatsapp_message . '" class="pdp-whatsapp whatsapp_number_1" title="' . __( 'Entre em contato pelo WhatsApp', 'pontodaprata' ) . '">';
+			echo '<a target="_blank" href="' . esc_url( $link ) . esc_html( $whatsapp_number_1 ) . '" class="pdp-whatsapp whatsapp_number_1" title="' . __( 'Entre em contato pelo WhatsApp', 'pontodaprata' ) . '">';
 			echo '<img src="' . $icon . '">';
 			echo '</a>';
 		}
 
 		if ( ! empty( $whatsapp_number_2 ) ) {
-			echo '<a target="_blank" href="' . esc_url( $link ) . esc_html( $whatsapp_number_2 ) . '?text=' . $whatsapp_message . '" class="pdp-whatsapp whatsapp_number_2" title="' . __( 'Entre em contato pelo WhatsApp', 'pontodaprata' ) . '">';
+			echo '<a target="_blank" href="' . esc_url( $link ) . esc_html( $whatsapp_number_2 ) . '" class="pdp-whatsapp whatsapp_number_2" title="' . __( 'Entre em contato pelo WhatsApp', 'pontodaprata' ) . '">';
 			echo '<img src="' . $icon . '">';
 			echo '</a>';
 		}
