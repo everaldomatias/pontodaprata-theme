@@ -79,7 +79,7 @@ class pdp_general_setting {
 function pdp_show_whatsapp_buttons() {
 	$whatsapp_number_1 = get_option( 'whatsapp_number_1', '' );
 	$whatsapp_number_2 = get_option( 'whatsapp_number_2', '' );
-	$link = 'https://api.whatsapp.com/send?phone=';
+	$link = 'https://api.whatsapp.com/send?phone=55';
 
 	if ( ! empty( $whatsapp_number_1 ) || ! empty( $whatsapp_number_2 ) ) {
 
