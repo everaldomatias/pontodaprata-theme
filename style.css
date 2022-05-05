@@ -45,3 +45,57 @@ Version:        0.1.0
 		bottom: calc(40vh - 60px);
 	}
 }
+
+
+/* Archive */
+.woocommerce.widget_product_categories .product-categories {
+	margin-left: 0;
+}
+
+.mfn-woo-filters-wrapper.shop-filters {
+	display: none;
+}
+
+.tax-product_cat .with_aside .four.columns {
+	float: left;
+}
+
+.tax-product_cat .sections_group {
+	float: right;
+}
+
+.tax-product_cat .widget-area .widget:first-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.tax-product_cat .widget-area .widget h4 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	text-transform: uppercase;
+}
+
+.tax-product_cat .widget-area .widget:nth-child(2) {
+	margin-top: 20px;
+}
+
+.tax-product_cat .widget-area .widget .wc-block-product-categories-list {
+	background-color: #f0b8a8;
+	list-style-type: square;
+	color: #fff;
+	padding: 5px 10px 5px 30px;
+}
+
+.tax-product_cat .widget-area .widget .wc-block-product-categories-list li a {
+	margin-bottom: 10px;
+}
+
+.tax-product_cat .widget-area .widget .wc-block-product-categories-list a {
+	color: white;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+
+.tax-product_cat .widget-area .widget .wc-block-product-categories-list a:hover {
+	text-decoration: none;
+}
