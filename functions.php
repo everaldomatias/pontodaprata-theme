@@ -36,6 +36,10 @@ function betheme_parent_theme_enqueue_styles() {
 			]
 		);
 	}
+
+	if ( is_page( 'cadastro' ) ) {
+		wp_enqueue_script( 'pdp-products', $get_stylesheet_directory_uri . '/js/register.js', [], $rand, true );
+	}
 }
 
 function pdp_admin_enqueues() {
