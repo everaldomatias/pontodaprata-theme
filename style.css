@@ -46,6 +46,19 @@ Version:        0.1.0
 	}
 }
 
+.archive #Header_wrapper #Subheader {
+	background-color: transparent;
+	background-image: inherit;
+	padding-top: 60px;
+}
+
+.archive #Header_wrapper #Subheader .title {
+	text-align: left;
+}
+
+.page .elementor-element-2df00907 {
+	margin-top: -110px;
+}
 
 /* Archive */
 .woocommerce.widget_product_categories .product-categories {
