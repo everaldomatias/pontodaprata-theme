@@ -146,3 +146,15 @@ Version:        0.1.0
 	display: block;
 	padding: 7px 0 7px 3px;
 }
+
+.woocommerce-form-row:last-child .message-form-empty {
+	border: 1px solid red;
+	display: none;
+	padding: 10px 15px;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.woocommerce-form-row:last-child .message-form-empty.show {
+	display: block;
+}

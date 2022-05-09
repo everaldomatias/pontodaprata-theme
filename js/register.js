@@ -1,5 +1,22 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
+    // <abbr class="required" title="obrigatório">*</abbr>
+    let cepAbbr = document.createElement('abbr');
+    cepAbbr.textContent = '*';
+    cepAbbr.classList.add('required');
+    cepAbbr.setAttribute('title', 'obrigatório');
+
+    let cpf = document.querySelector('[for="cpf"]');
+    cpf.append(cepAbbr);
+
+    //
+    let lastRow = document.querySelector('.woocommerce-form-row:last-child');
+    messageError = document.createElement('div');
+    messageError.classList.add('message-form-empty');
+    messageError.textContent = 'Preencha todos os campos obrigatórios.';
+
+    lastRow.insertBefore(messageError, lastRow.firstChild);
+
     // Disable submit button
     let submitButton = document.querySelector('.woocommerce-form-register__submit');
     submitButton.disabled = true;
@@ -34,8 +51,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         if (validInputs.length === 0 && type.value.length > 0) {
             submitButton.removeAttribute('disabled');
+            messageError.classList.remove('show');
         } else {
             submitButton.disabled = true;
+            messageError.classList.add('show');
         }
     }, 750);
 
