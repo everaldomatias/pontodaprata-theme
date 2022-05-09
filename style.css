@@ -112,3 +112,37 @@ Version:        0.1.0
 .tax-product_cat .widget-area .widget .wc-block-product-categories-list a:hover {
 	text-decoration: none;
 }
+
+.single-product #Subheader {
+	display: none;
+}
+
+.single-product .woocommerce-products-header__title,title.page-title {
+	line-height: 1.25;
+}
+
+.single-product .woocommerce-Price-amount.amount {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.single-product .inner-wrapper-sticky.clearfix aside:first-child {
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.single-product .inner-wrapper-sticky.clearfix aside:nth-child(2) .wc-block-product-categories-list {
+    background-color: #f0b8a8;
+    list-style-type: square;
+    color: #fff;
+    padding: 5px 10px 5px 30px;
+}
+
+.single-product .inner-wrapper-sticky.clearfix aside:nth-child(2) .wc-block-product-categories-list li a {
+	margin-bottom: 8px;
+	color: white;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
