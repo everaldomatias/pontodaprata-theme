@@ -168,3 +168,38 @@ Version:        0.1.0
 .woocommerce-form-row:last-child .message-form-empty.show {
 	display: block;
 }
+
+#tipo_de_cadastro_field label {
+	margin-bottom: 0;
+	padding-top: 4px;
+	padding-left: 5px;
+}
+
+.single-product .widget-area {
+	padding-top: 30px;
+}
+
+.single-product .inner-wrapper-sticky.clearfix aside:first-child:after {
+	display: none !important;
+}
+
+.single-product .mfn-related {
+}
+
+.single-product .mfn-related > h3.title {
+	font-size: 24px;
+}
+
+.single-product .mfn-related .products {
+
+}
+
+.single-product .mfn-related .products li h2.title {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.single-product .mfn-related .mfn-li-product-row.mfn-li-product-row-price {
+	display: none;
+}
+
