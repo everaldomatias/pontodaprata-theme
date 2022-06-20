@@ -92,6 +92,16 @@ Version:        0.1.0
 	margin-top: 20px;
 }
 
+.tax-product_cat aside {
+	overflow: hidden;
+}
+
+.elementor-widget-container h4.elementor-heading-title.elementor-size-default {
+	border-bottom: 1px solid rgba(0,0,0,.08);
+	padding-bottom: 3px;
+}
+
+.widget_product_categories .product-categories,
 .tax-product_cat .widget-area .widget .wc-block-product-categories-list {
 	background-color: #f0b8a8;
 	list-style-type: square;
@@ -103,12 +113,14 @@ Version:        0.1.0
 	margin-bottom: 10px;
 }
 
+.widget_product_categories .product-categories li a,
 .tax-product_cat .widget-area .widget .wc-block-product-categories-list a {
-	color: rgb(65, 70, 77);
+	color: rgb(65, 70, 77) !important;
 	display: block;
 	padding: 7px 0 7px 3px;
 }
 
+.widget_product_categories .product-categories li a:hover,
 .tax-product_cat .widget-area .widget .wc-block-product-categories-list a:hover {
 	text-decoration: none;
 }
