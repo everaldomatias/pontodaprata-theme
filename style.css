@@ -101,6 +101,10 @@ Version:        0.1.0
 	padding-bottom: 3px;
 }
 
+.widget_product_categories ul > li:after {
+	display: none;
+}
+
 .widget_product_categories .product-categories,
 .tax-product_cat .widget-area .widget .wc-block-product-categories-list {
 	background-color: #f0b8a8;
