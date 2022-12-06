@@ -103,3 +103,18 @@ function pdp_show_whatsapp_buttons() {
 	}
 }
 add_action( 'wp_footer', 'pdp_show_whatsapp_buttons' );
+
+/**
+ * Redirect non admin to Home on logout
+ */
+function pdp_redirect_after_logout( $user_id ){
+
+	$user = get_userdata( $user_id );
+
+	if ( $user && ! in_array( 'administrator', $user->roles ) ) {
+		wp_safe_redirect( home_url() );
+		exit();
+	}
+
+}
+add_action( 'wp_logout', 'pdp_redirect_after_logout' );
